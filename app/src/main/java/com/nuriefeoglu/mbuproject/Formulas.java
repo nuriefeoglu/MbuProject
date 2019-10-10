@@ -1,9 +1,5 @@
 package com.nuriefeoglu.mbuproject;
 
-import android.widget.EditText;
-
-import java.util.Scanner;
-
 public class Formulas {
 
     //Türbülans akımı hesaplama
@@ -41,6 +37,4 @@ public class Formulas {
 
         return economicdiameter ;
     }
-
-
 }
