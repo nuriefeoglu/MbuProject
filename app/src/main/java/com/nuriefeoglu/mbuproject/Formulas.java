@@ -22,6 +22,7 @@ public class Formulas {
         turbulancecurren = (v * d) / kv ;
 
         return turbulancecurren;
+
     }
 
     //Borunun ekonomik çapının hesaplanması
