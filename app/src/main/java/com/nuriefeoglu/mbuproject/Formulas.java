@@ -3,10 +3,10 @@ package com.nuriefeoglu.mbuproject;
 public class Formulas {
 
     //Türbülans akımı hesaplama
+
     /**
-     *
      * @tag = 0
-     * */
+     */
     static Double turbulanceCurrent(Double v, Double d, Double kv) {
 
         //v = akışkanın hızı
@@ -22,12 +22,12 @@ public class Formulas {
     }
 
     //Borunun ekonomik çapının hesaplanması
+
     /**
-     *
      * @tag = 1
-     * */
+     */
     static Double calculateEconomicDiameterOfThePipe(Double n, Double e, Double f, Double q) {
-        //d = borunun ekonomik çapı
+        //economicdiameter = borunun ekonomik çapı
         //n = günlük pompa çalışma saati (24e bölünmüş)
         //e = kWsaat fiyatı (fransız frangı cinsinden)
         //f = hattın birim boy maliyeti (fransız frangı)
@@ -40,6 +40,10 @@ public class Formulas {
     }
 
     //Yük kayıplarının hesaplanması
+
+    /**
+     * @tag = 2
+     */
     static Double calculateOfLoadLoses(Double p, Double g, Double z, Double pcl, Double v) {
         //p = akışkanın yoğunluğu
         //g = yerçekimi ivmesi
@@ -54,11 +58,16 @@ public class Formulas {
     }
 
     //Yumuşak dönüşlü yük kaybı hesaplaması => dairesel
+
+    /**
+     * @tag = 3
+     */
     static Double circularRoutesCalculateOfChargeLoadSoft(Double d, Double q, Double r, Double v, Double g) {
         //localchargeloss = yerel yük kaybı
         //v = boru içindeki akışkan hızı
         //g = yerçekimi ivmesi
-        //k = boyutsuz sabit , yük kaybı katsayısı
+        //d = borunun iç çapı
+        //r = kıvrımın yarıçapı
         //q = açı
 
         Double localloadloss;
@@ -67,6 +76,10 @@ public class Formulas {
     }
 
     //Keskin dönüşlü yük kaybı => dairesel
+
+    /**
+     * @tag = 4
+     */
     static Double circularRoutesCalculateOfLoadLosesHard(Double q, Double v, Double g) {
         //q = açı
         //v = boru içindeki akışkan hızı
@@ -79,6 +92,10 @@ public class Formulas {
     //Gidiş istikametinde dallanma ve giriş akımına bağlantı formulü
     //dallanan bölümler için kr ve kb değerleri tablodan bakılarak girecektir.
     //KONİKLİLERDE YÜK KAYBI KATSAYISI HESAPLAMA(AÇILAN VE DARALAN)
+
+    /**
+     * @tag = 5
+     */
     static Double branchingAndConnectionCurrent(Double Vt, Double k, Double g) {
         //Vt = girişteki akım hızı m/sn
         //Kullanıcı k değeri için Qb/Qt tablosuna bakılacak
@@ -87,6 +104,10 @@ public class Formulas {
         return k * Math.pow(Vt, 2) / (2 * g);
     }
 
+    /**
+     * @tag = 6
+     */
+    //açılan koniklerde yük kaybı hesaplama
     static Double expandingConic(Double expansionAngle, Double d1, Double d2, Double v1, Double g) {
         //expansionAngle = genişleme açısı
         //d1 = genişleme öncesi borunun iç çapı m
@@ -105,21 +126,29 @@ public class Formulas {
 
 
     //ÇAPTA ANİ DEĞİŞİMLERLE YÜK KAYBI KATSAYISI
-    static Double suddenContraction(Double v2, Double d1, Double d2, Double g) {
+
+    /**
+     * @tag = 7
+     */
+    static Double suddenContraction(Double v2, Double k, Double g) {
         //v2 daralmadan sonraki vız değeri
-        //d1 sıkışma öncesi çap
-        //d2 sıkışma sonrası çap
+        //k yük kaybı katsayısı
         //g yerçekimi izmesi
 
-        return Math.pow(d1 / d2, 2) * Math.pow(v2, 2) / (2 * g);
+        return k * Math.pow(v2, 2) / (2 * g);
     }
 
     //TAM DOLU BORULARDA YÜK KAYIPLARI
+
+    /**
+     * @tag = 8
+     */
     static Double darcyWeisbachMethod(Double lamda, Double D, Double g, Double V) {
         //sonuç yük kaybı değerini döndürür
         //lamda = yük kaybı katsayısı
         //D = boru içi çapı
         //g = yerçekimi ivmesi
+        //V = hız
 
         Double J;
         J = (lamda * Math.pow(V, 2) / (2 * g * D));
@@ -127,18 +156,26 @@ public class Formulas {
     }
 
     //KISMEN DOLU HATLARDAKİ YÜK KAYIPLARI
-    static Double manningStricklerMethodSame(Double n, Double R, Double J) {
+
+    /**
+     * @tag = 9
+     */
+    static Double manningStricklerMethodSame(Double n, Double R, Double V) {
         //J = yük kaybı
         //n = Manning formülünde pürüzlülük katsayısı
         //V = ortalama sıvı akış hızı
         //R = hidrolik yarıçap
 
-        Double V;
-        V = (1 / n) * Math.pow(R, 2 / 3) * Math.pow(J, 1 / 2);
-        return V;
+        Double J;
+        J = Math.pow(V * n * (1 / Math.pow(R, 2 / 3)), 2);
+        return J;
     }
 
     //TAM DOLU BORU HATLARINDA YÜK KAYBI
+
+    /**
+     * @tag = 10
+     */
     static Double manningStricklerMethodFull(Double n, Double V, Double D) {
 
         //n = Manning formülünde pürüzlülük katsayısı
@@ -149,18 +186,11 @@ public class Formulas {
         return J;
     }
 
-    //YARIM DOLU BORULARDA
-    static Double hazenWilliamsMethodSame(Double Cwh, Double R, Double J) {
-        //Cwh = Hazen williams formülünde pürüzlülük katsayısı
-        //R = Hidrolik yarıçap
-        //J = yük kaybı
-
-        Double V;
-        V = 0.849 * (Cwh) * Math.pow(R, 0.63) * Math.pow(J, 0.54);
-        return V;
-    }
-
     //TAM DOLU BORULARDA
+
+    /**
+     * @tag = 11
+     */
     static Double hazenWilliamsMethodFull(Double Cwh, Double V, Double D) {
         //Cwh =Hazen williams formülünde pürüzlülük katsayısı
         //V = ortalama sıvı akışı
@@ -170,8 +200,13 @@ public class Formulas {
         return J;
     }
 
+    /**
+     * @tag = 12
+     */
     static Double colebrookWhiteMethod(Double epsilon, Double D, Double Re) {
         //epsilon = türbülans dağılma oranı
+        //Re = Reynolds katsayısı
+        //D = borunun iç çapı
         Double lamda;
         lamda = 0.25 / Math.pow(Math.log((epsilon / D) / (3.7)) + (5.74 / (Math.pow(Re, 0.9))), 2);
         return lamda;
