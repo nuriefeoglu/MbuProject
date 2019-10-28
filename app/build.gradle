@@ -32,4 +32,7 @@ dependencies {
     androidTestImplementation "androidx.test.espresso:espresso-core:$expressoCoreVersion"
     implementation "com.jakewharton:butterknife:$butterKnifeVersion"
     annotationProcessor "com.jakewharton:butterknife-compiler:$butterKnifeVersion"
+
+    //Material Design
+    implementation "com.google.android.material:material:$materialDesignVersion"
 }

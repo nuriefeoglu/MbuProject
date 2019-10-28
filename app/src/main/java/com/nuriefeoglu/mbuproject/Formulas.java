@@ -3,6 +3,10 @@ package com.nuriefeoglu.mbuproject;
 public class Formulas {
 
     //Türbülans akımı hesaplama
+    /**
+     *
+     * @tag = 0
+     * */
     static Double turbulanceCurrent(Double v, Double d, Double kv) {
 
         //v = akışkanın hızı
@@ -18,6 +22,10 @@ public class Formulas {
     }
 
     //Borunun ekonomik çapının hesaplanması
+    /**
+     *
+     * @tag = 1
+     * */
     static Double calculateEconomicDiameterOfThePipe(Double n, Double e, Double f, Double q) {
         //d = borunun ekonomik çapı
         //n = günlük pompa çalışma saati (24e bölünmüş)
