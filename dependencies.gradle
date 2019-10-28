@@ -8,5 +8,6 @@ ext{
     jUnitVersion = '4.12'
     testRunnerVersion = '1.2.0'
     expressoCoreVersion = '3.2.0'
+    butterKnifeVersion = '10.2.0'
 
 }
