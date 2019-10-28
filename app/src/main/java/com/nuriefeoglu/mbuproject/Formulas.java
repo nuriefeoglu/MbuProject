@@ -10,10 +10,10 @@ public class Formulas {
         //kv = kinematik viskozite (m^2/sn)
         //kv değeri için tableTurbulanceCurrent tablosundan değer alınacaktır
 
-        Double turbulancecurren;
-        turbulancecurren = (v * d) / kv;
+        Double turbulancecurrent;
+        turbulancecurrent = (v * d) / kv;
 
-        return turbulancecurren;
+        return turbulancecurrent;
 
     }
 
