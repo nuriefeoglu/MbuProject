@@ -7,7 +7,7 @@ public class Formulas {
     /**
      * @tag = 0
      */
-    static Double turbulanceCurrent(Double v, Double d, Double kv) {
+    public static Double turbulanceCurrent(Double v, Double d, Double kv) {
 
         //v = akışkanın hızı
         //d = borunun iç çapı
@@ -26,7 +26,7 @@ public class Formulas {
     /**
      * @tag = 1
      */
-    static Double calculateEconomicDiameterOfThePipe(Double n, Double e, Double f, Double q) {
+    public static Double calculateEconomicDiameterOfThePipe(Double n, Double e, Double f, Double q) {
         //economicdiameter = borunun ekonomik çapı
         //n = günlük pompa çalışma saati (24e bölünmüş)
         //e = kWsaat fiyatı (fransız frangı cinsinden)
@@ -44,7 +44,7 @@ public class Formulas {
     /**
      * @tag = 2
      */
-    static Double calculateOfLoadLoses(Double p, Double g, Double z, Double pcl, Double v) {
+    public static Double calculateOfLoadLoses(Double p, Double g, Double z, Double pcl, Double v) {
         //p = akışkanın yoğunluğu
         //g = yerçekimi ivmesi
         //z = akışkanın referans yatay bir düzleme göre konumu,
@@ -62,7 +62,7 @@ public class Formulas {
     /**
      * @tag = 3
      */
-    static Double circularRoutesCalculateOfChargeLoadSoft(Double d, Double q, Double r, Double v, Double g) {
+    public static Double circularRoutesCalculateOfChargeLoadSoft(Double d, Double q, Double r, Double v, Double g) {
         //localchargeloss = yerel yük kaybı
         //v = boru içindeki akışkan hızı
         //g = yerçekimi ivmesi
@@ -80,7 +80,7 @@ public class Formulas {
     /**
      * @tag = 4
      */
-    static Double circularRoutesCalculateOfLoadLosesHard(Double q, Double v, Double g) {
+    public static Double circularRoutesCalculateOfLoadLosesHard(Double q, Double v, Double g) {
         //q = açı
         //v = boru içindeki akışkan hızı
         //g = yerçekimi ivmesi
@@ -96,7 +96,7 @@ public class Formulas {
     /**
      * @tag = 5
      */
-    static Double branchingAndConnectionCurrent(Double Vt, Double k, Double g) {
+    public static Double branchingAndConnectionCurrent(Double Vt, Double k, Double g) {
         //Vt = girişteki akım hızı m/sn
         //Kullanıcı k değeri için Qb/Qt tablosuna bakılacak
         //g = yerçekimi ivmesi
@@ -108,7 +108,7 @@ public class Formulas {
      * @tag = 6
      */
     //açılan koniklerde yük kaybı hesaplama
-    static Double expandingConic(Double expansionAngle, Double d1, Double d2, Double v1, Double g) {
+    public static Double expandingConic(Double expansionAngle, Double d1, Double d2, Double v1, Double g) {
         //expansionAngle = genişleme açısı
         //d1 = genişleme öncesi borunun iç çapı m
         //d2 = genişleme sonrası borunun iç çapı m
@@ -130,7 +130,7 @@ public class Formulas {
     /**
      * @tag = 7
      */
-    static Double suddenContraction(Double v2, Double k, Double g) {
+    public static Double suddenContraction(Double v2, Double k, Double g) {
         //v2 daralmadan sonraki vız değeri
         //k yük kaybı katsayısı
         //g yerçekimi izmesi
@@ -143,7 +143,7 @@ public class Formulas {
     /**
      * @tag = 8
      */
-    static Double darcyWeisbachMethod(Double lamda, Double D, Double g, Double V) {
+    public static Double darcyWeisbachMethod(Double lamda, Double D, Double g, Double V) {
         //sonuç yük kaybı değerini döndürür
         //lamda = yük kaybı katsayısı
         //D = boru içi çapı
@@ -160,7 +160,7 @@ public class Formulas {
     /**
      * @tag = 9
      */
-    static Double manningStricklerMethodSame(Double n, Double R, Double V) {
+    public static Double manningStricklerMethodSame(Double n, Double R, Double V) {
         //J = yük kaybı
         //n = Manning formülünde pürüzlülük katsayısı
         //V = ortalama sıvı akış hızı
@@ -176,7 +176,7 @@ public class Formulas {
     /**
      * @tag = 10
      */
-    static Double manningStricklerMethodFull(Double n, Double V, Double D) {
+    public static Double manningStricklerMethodFull(Double n, Double V, Double D) {
 
         //n = Manning formülünde pürüzlülük katsayısı
         //V = ortalama sıvı akış hızı
@@ -191,7 +191,7 @@ public class Formulas {
     /**
      * @tag = 11
      */
-    static Double hazenWilliamsMethodFull(Double Cwh, Double V, Double D) {
+    public static Double hazenWilliamsMethodFull(Double Cwh, Double V, Double D) {
         //Cwh =Hazen williams formülünde pürüzlülük katsayısı
         //V = ortalama sıvı akışı
         //D = boru iç çapı
@@ -203,7 +203,7 @@ public class Formulas {
     /**
      * @tag = 12
      */
-    static Double colebrookWhiteMethod(Double epsilon, Double D, Double Re) {
+    public static Double colebrookWhiteMethod(Double epsilon, Double D, Double Re) {
         //epsilon = türbülans dağılma oranı
         //Re = Reynolds katsayısı
         //D = borunun iç çapı
