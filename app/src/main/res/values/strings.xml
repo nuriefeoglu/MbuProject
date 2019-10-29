@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MbuProject</string>
+    <string name="calculate_turbulance_current">Türbülans Akımı Hesapla</string>
+    <string name="akiskan_hizi_input">Akışkan Hızı</string>
+    <string name="boru_ic_cap_input">Borunun İç Çapı</string>
+    <string name="sicaklik_degeri_input">Sıcaklık Değerini Seçiniz</string>
+    <string name="calculate">Hesapla</string>
 </resources>

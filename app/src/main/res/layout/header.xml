@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="16dp"
+        >
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:insetBottom="0dp"
+            android:insetRight="0dp"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            app:cornerRadius="22dp"
+            app:icon="@drawable/ic_back"
+            app:iconGravity="start"
+            app:iconTint="#545454"
+            android:padding="8dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#545454"
+            app:backgroundTint="#fff"
+            android:stateListAnimator="@null"
+            android:id="@+id/btnHeaderBack"
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtHeader"
+            android:layout_gravity="center"
+            android:textSize="24sp"
+            android:textColor="#545454"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp"
+            android:text="@string/calculate_turbulance_current"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#545454"
+        android:layout_marginStart="76dp"
+        android:layout_marginBottom="16dp"
+        />
+
+
+
+</LinearLayout>
