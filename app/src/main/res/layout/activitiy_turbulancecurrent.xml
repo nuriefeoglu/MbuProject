@@ -38,7 +38,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:maxLines="1"
-                    android:inputType="number"
+                    android:inputType="number|numberDecimal"
                     android:id="@+id/edt_akiskan_hizi"
                     />
 
@@ -57,7 +57,7 @@
                     android:layout_height="wrap_content"
                     android:maxLines="1"
                     android:id="@+id/edt_boru_ic_cap"
-                    android:inputType="number"
+                    android:inputType="number|numberDecimal"
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
