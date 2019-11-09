@@ -12,7 +12,9 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
 
-        <activity android:name=".turbulancecurrent.TurbulanceCurrentActivitiy">
+        <activity
+            android:name=".turbulancecurrent.TurbulanceCurrentActivitiy"
+            android:windowSoftInputMode="stateHidden">
 
         </activity>
         <activity android:name=".home.MainActivity">
@@ -22,6 +24,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".calculateEconomicDiameterOfThePipe.CalculateEconomicDiameterOfThePipeActivity" />
+
+
+
+
     </application>
 
 </manifest>
