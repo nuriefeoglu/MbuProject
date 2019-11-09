@@ -11,4 +11,5 @@
     <string name="kw_saat_fiyati">Kw/Saat Fiyatı Giriniz</string>
     <string name="birim_boy_maliyet">Birim Boy Fiyatını Giriniz</string>
     <string name="debi">Debi Değerini Giriniz</string>
+    <string name="debis">Debi Değerini Giriniz</string>
 </resources>
