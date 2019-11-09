@@ -11,36 +11,20 @@
         android:orientation="vertical"
         tools:context=".home.MainActivity">
 
+
         <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:insetTop="0dp"
+            android:insetLeft="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:textAllCaps="false"
+            android:stateListAnimator="@null"
             android:id="@+id/btnCalculateTurbulance"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
-            android:stateListAnimator="@null"
             android:text="@string/calculate_turbulance_current"
-            android:textAllCaps="false" />
+            />
 
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnCalculateEconomicDiameter"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/button_margin_top"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
-            android:stateListAnimator="@null"
-            android:text="@string/calculate_economic_diameter_of_the_pipe"
-            android:textAllCaps="false" />
-
-        <include
-            android:id="@+id/incHeader"
-            layout="@layout/header"
-            android:visibility="gone" />
 
 
     </LinearLayout>

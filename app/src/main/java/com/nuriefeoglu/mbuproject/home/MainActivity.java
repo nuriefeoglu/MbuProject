@@ -1,16 +1,19 @@
 package com.nuriefeoglu.mbuproject.home;
 
 import android.content.Intent;
+import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.button.MaterialButton;
 import com.nuriefeoglu.mbuproject.R;
-import com.nuriefeoglu.mbuproject.base.BaseActivity;
-import com.nuriefeoglu.mbuproject.calculateEconomicDiameterOfThePipe.CalculateEconomicDiameterOfThePipeActivity;
 import com.nuriefeoglu.mbuproject.turbulancecurrent.TurbulanceCurrentActivitiy;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends AppCompatActivity {
 
     //1)TÜRBÜLANS AKIMI HESAPLAMA
     //2)BORUNUN EKONOMİK ÇAPINI HESAPLAMA
@@ -28,16 +31,15 @@ public class MainActivity extends BaseActivity {
 
     @BindView(R.id.btnCalculateTurbulance)
     MaterialButton btnCalculateTurbulance;
-    @BindView(R.id.btnCalculateEconomicDiameter)
-    MaterialButton btnCalculateEconomicDiameter;
 
-
+    private Unbinder unbinder;
 
     @Override
-    protected void viewDidLoad() {
-
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        unbinder = ButterKnife.bind(this);
         setupListeners();
-
     }
 
     private void setupListeners() {
@@ -49,23 +51,15 @@ public class MainActivity extends BaseActivity {
 
         });
 
-        btnCalculateEconomicDiameter.setOnClickListener(v -> {
-
-            Intent intent = new Intent(this, CalculateEconomicDiameterOfThePipeActivity.class);
-            startActivity(intent);
-        });
-
 
     }
 
-
     @Override
-    protected int layoutRes() {
-        return R.layout.activity_main;
-    }
-
-    @Override
-    public String setHeaderText() {
-        return null;
+    protected void onDestroy() {
+        super.onDestroy();
+        if (unbinder != null) {
+            unbinder.unbind();
+            unbinder = null;
+        }
     }
 }
