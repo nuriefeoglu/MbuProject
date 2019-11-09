@@ -5,4 +5,10 @@
     <string name="boru_ic_cap_input" translatable="false">Borunun İç Çapı</string>
     <string name="sicaklik_degeri_input" translatable="false">Sıcaklık Değerini Seçiniz</string>
     <string name="calculate" translatable="false">Hesapla</string>
+    <string name="empty_field">Lütfen boş alanları doldurunuz</string>
+    <string name="calculate_economic_diameter_of_the_pipe">Borunun Ekonomik Çapının Hesaplanması</string>
+    <string name="calisma_saati">Günlük Çalışma Saatini Giriniz</string>
+    <string name="kw_saat_fiyati">Kw/Saat Fiyatı Giriniz</string>
+    <string name="birim_boy_maliyet">Birim Boy Fiyatını Giriniz</string>
+    <string name="debi">Debi Değerini Giriniz</string>
 </resources>
