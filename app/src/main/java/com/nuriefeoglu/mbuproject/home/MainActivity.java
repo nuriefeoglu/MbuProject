@@ -7,6 +7,7 @@ import com.nuriefeoglu.mbuproject.R;
 import com.nuriefeoglu.mbuproject.base.BaseActivity;
 import com.nuriefeoglu.mbuproject.calculateEconomicDiameterOfThePipe.CalculateEconomicDiameterOfThePipeActivity;
 import com.nuriefeoglu.mbuproject.calculateofloadloses.CalculateOfLoadLosesActivity;
+import com.nuriefeoglu.mbuproject.circularroutescalculateofchargeloadsoft.CircularRoutesCalculateOfChargeLoadSoftActivity;
 import com.nuriefeoglu.mbuproject.turbulancecurrent.TurbulanceCurrentActivitiy;
 
 import butterknife.BindView;
@@ -16,7 +17,7 @@ public class MainActivity extends BaseActivity {
     //1)TÜRBÜLANS AKIMI HESAPLAMA
     //2)BORUNUN EKONOMİK ÇAPINI HESAPLAMA
     //3)YÜK KAYIPLARINI HESAPLAMA
-    //4)DAİRESEL DÖNÜŞLÜ YÜK KAYBI HESABI
+    //4)DAİRESEL DÖNÜŞLÜ YÜK KAYBI HESABI (soft)
     //5)KESKİN DÖNÜŞLÜ YÜK KAYBI HESAPLAMA
     //6)GİDİŞ İSTİKAMETİNDE DALLANNAN VE BAĞLANAN BORULARIN YÜK KAYIPLARINI HESAPLAMA
     //7)AÇILAN KONUKLERDE YÜK KAYBI HESAPLAMA
@@ -33,7 +34,8 @@ public class MainActivity extends BaseActivity {
     MaterialButton btnCalculateEconomicDiameter;
     @BindView(R.id.btnCalculateOfLoadLoses)
     MaterialButton btnCalculateOfLoadLoses;
-
+    @BindView(R.id.btnCircularRoutesCalculateOfChargeLoadSoft)
+    MaterialButton btnCircularRoutesCalculateOfChargeLoadSoft;
 
 
     @Override
@@ -64,6 +66,10 @@ public class MainActivity extends BaseActivity {
             startActivity(intent);
         });
 
+        btnCircularRoutesCalculateOfChargeLoadSoft.setOnClickListener(v -> {
+            Intent intent = new Intent(this, CircularRoutesCalculateOfChargeLoadSoftActivity.class);
+            startActivity(intent);
+        });
 
 
     }

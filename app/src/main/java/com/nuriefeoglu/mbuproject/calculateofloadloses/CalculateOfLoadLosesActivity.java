@@ -10,7 +10,7 @@ import com.nuriefeoglu.mbuproject.base.BaseActivity;
 
 import butterknife.BindView;
 
-public class CalculateOfLoadLosesActivity extends BaseActivity implements ICalculateOfLoadLoses {
+public class CalculateOfLoadLosesActivity extends BaseActivity implements ICalculateOfLoadLosesView {
 
     @BindView(R.id.edt_akiskan_yogunlugu)
     TextInputEditText edtAkiskanYogunlugu;
@@ -46,14 +46,15 @@ public class CalculateOfLoadLosesActivity extends BaseActivity implements ICalcu
         return getStringResource(R.string.calculate_of_load_loses);
     }
 
+    @SuppressWarnings("ConstantConditions")
     @Override
     public void setupButtonListener() {
         btnHesapla.setOnClickListener(v -> {
-            if (!edtAkiskanYogunlugu.getText().toString().matches("")&&
-            !edtYercekimiIvmesi.getText().toString().matches("")&&
-            !edtAkiskaninYatayDuzlemeGoreKonumu.getText().toString().matches("")&&
-            !edtBasincDegeri.getText().toString().matches("")&&
-            !edtAkiskanHizi.getText().toString().matches("")){
+            if (!edtAkiskanYogunlugu.getText().toString().matches("") &&
+                    !edtYercekimiIvmesi.getText().toString().matches("") &&
+                    !edtAkiskaninYatayDuzlemeGoreKonumu.getText().toString().matches("") &&
+                    !edtBasincDegeri.getText().toString().matches("") &&
+                    !edtAkiskanHizi.getText().toString().matches("")) {
                 Double result = Formulas.calculateOfLoadLoses(
                         Double.parseDouble(edtAkiskanYogunlugu.getText().toString()),
                         Double.parseDouble(edtYercekimiIvmesi.getText().toString()),
@@ -61,8 +62,8 @@ public class CalculateOfLoadLosesActivity extends BaseActivity implements ICalcu
                         Double.parseDouble(edtBasincDegeri.getText().toString()),
                         Double.parseDouble(edtAkiskanHizi.getText().toString())
                 );
-                txtSonuc.setText(String.format("Sonuç : %s",result));
-            }else {
+                txtSonuc.setText(String.format("Sonuç : %s", result));
+            } else {
                 showToast(getStringResource(R.string.empty_field));
             }
         });

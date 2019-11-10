@@ -17,4 +17,7 @@
     <string name="yatay_duzlem_konumu">Akışkanın Yatay Düzleme Göre Konumunu Giriniz</string>
     <string name="basinc_degeri">Pascal Cinsinden Basınç Değerini Giriniz</string>
     <string name="calculate_of_load_loses">Yük Kayıplarının Hesaplanması</string>
+    <string name="circular_routes_calculate_of_charge_load_soft">Dairesel Dönüşlü Yük Kaybı Hesaplanması</string>
+    <string name="aci_degeri_input">Açı Değerini Giriniz</string>
+    <string name="kivrim_yaricap">Kıvrımın Yarıçapını Giriniz</string>
 </resources>

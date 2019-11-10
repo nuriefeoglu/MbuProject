@@ -1,8 +1,7 @@
 package com.nuriefeoglu.mbuproject.calculateofloadloses;
 
-public interface ICalculateOfLoadLoses {
-    void setupHeader();
-    String setHeaderText();
+public interface ICalculateOfLoadLosesView {
+
     void setupButtonListener();
 
 }
