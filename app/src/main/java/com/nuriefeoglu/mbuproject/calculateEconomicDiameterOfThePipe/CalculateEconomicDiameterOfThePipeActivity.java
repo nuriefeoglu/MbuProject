@@ -13,18 +13,18 @@ import butterknife.BindView;
 public class CalculateEconomicDiameterOfThePipeActivity extends BaseActivity implements ICalculateEconomicDiameterOfThePipeView {
 
     @BindView(R.id.edt_gunluk_calisma_saati)
-    TextInputEditText edtgunlukcalismasaati;
+    TextInputEditText edtGunlukCalismaSaati;
     @BindView(R.id.edt_kw_saat_fiyati)
-    TextInputEditText edtkwsaatfiyati;
+    TextInputEditText edtKwSaatFiyati;
     @BindView(R.id.edt_birim_boy_fiyati)
-    TextInputEditText edtbirimboyfiyati;
+    TextInputEditText edtBirimBoyFiyati;
     @BindView(R.id.edt_debi_degeri)
-    TextInputEditText edtdebidegeri;
+    TextInputEditText edtDebiDegeri;
 
     @BindView(R.id.btn_hesapla)
-    MaterialButton btnhesapla;
+    MaterialButton btnHesapla;
     @BindView(R.id.txt_sonuc)
-    TextView txtsonuc;
+    TextView txtSonuc;
 
 
     @Override
@@ -48,18 +48,18 @@ public class CalculateEconomicDiameterOfThePipeActivity extends BaseActivity imp
     @Override
     protected void viewDidLoad() {
 
-        btnhesapla.setOnClickListener(v -> {
-            if (!edtgunlukcalismasaati.getText().toString().matches("") &&
-                    !edtkwsaatfiyati.getText().toString().matches("") &&
-                    !edtbirimboyfiyati.getText().toString().matches("") &&
-                    !edtdebidegeri.getText().toString().matches("")) {
+        btnHesapla.setOnClickListener(v -> {
+            if (!edtGunlukCalismaSaati.getText().toString().matches("") &&
+                    !edtKwSaatFiyati.getText().toString().matches("") &&
+                    !edtBirimBoyFiyati.getText().toString().matches("") &&
+                    !edtDebiDegeri.getText().toString().matches("")) {
 
                 Double result = Formulas.calculateEconomicDiameterOfThePipe(
-                        Double.parseDouble(edtgunlukcalismasaati.getText().toString()),
-                        Double.parseDouble(edtkwsaatfiyati.getText().toString()),
-                        Double.parseDouble(edtbirimboyfiyati.getText().toString()),
-                        Double.parseDouble(edtdebidegeri.getText().toString()));
-                txtsonuc.setText(String.format("Sonuç : %s", result));
+                        Double.parseDouble(edtGunlukCalismaSaati.getText().toString()),
+                        Double.parseDouble(edtKwSaatFiyati.getText().toString()),
+                        Double.parseDouble(edtBirimBoyFiyati.getText().toString()),
+                        Double.parseDouble(edtDebiDegeri.getText().toString()));
+                txtSonuc.setText(String.format("Sonuç : %s", result));
 
             } else {
                 showToast(getStringResource(R.string.empty_field));

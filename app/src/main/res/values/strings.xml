@@ -12,4 +12,9 @@
     <string name="birim_boy_maliyet">Birim Boy Fiyatını Giriniz</string>
     <string name="debi">Debi Değerini Giriniz</string>
     <string name="debis">Debi Değerini Giriniz</string>
+    <string name="akiskan_yogunlugu">Akışkanın Yoğunluğunu Giriniz</string>
+    <string name="yercekimi_ivmesi">Yerçekimi İvmesini Giriniz</string>
+    <string name="yatay_duzlem_konumu">Akışkanın Yatay Düzleme Göre Konumunu Giriniz</string>
+    <string name="basinc_degeri">Pascal Cinsinden Basınç Değerini Giriniz</string>
+    <string name="calculate_of_load_loses">Yük Kayıplarının Hesaplanması</string>
 </resources>

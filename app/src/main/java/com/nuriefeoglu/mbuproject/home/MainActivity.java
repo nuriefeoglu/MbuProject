@@ -6,6 +6,7 @@ import com.google.android.material.button.MaterialButton;
 import com.nuriefeoglu.mbuproject.R;
 import com.nuriefeoglu.mbuproject.base.BaseActivity;
 import com.nuriefeoglu.mbuproject.calculateEconomicDiameterOfThePipe.CalculateEconomicDiameterOfThePipeActivity;
+import com.nuriefeoglu.mbuproject.calculateofloadloses.CalculateOfLoadLosesActivity;
 import com.nuriefeoglu.mbuproject.turbulancecurrent.TurbulanceCurrentActivitiy;
 
 import butterknife.BindView;
@@ -30,6 +31,8 @@ public class MainActivity extends BaseActivity {
     MaterialButton btnCalculateTurbulance;
     @BindView(R.id.btnCalculateEconomicDiameter)
     MaterialButton btnCalculateEconomicDiameter;
+    @BindView(R.id.btnCalculateOfLoadLoses)
+    MaterialButton btnCalculateOfLoadLoses;
 
 
 
@@ -54,6 +57,13 @@ public class MainActivity extends BaseActivity {
             Intent intent = new Intent(this, CalculateEconomicDiameterOfThePipeActivity.class);
             startActivity(intent);
         });
+
+        btnCalculateOfLoadLoses.setOnClickListener(v -> {
+
+            Intent intent = new Intent(this, CalculateOfLoadLosesActivity.class);
+            startActivity(intent);
+        });
+
 
 
     }
