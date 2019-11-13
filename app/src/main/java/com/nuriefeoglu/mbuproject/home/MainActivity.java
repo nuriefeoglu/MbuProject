@@ -12,7 +12,7 @@ import com.nuriefeoglu.mbuproject.turbulancecurrent.TurbulanceCurrentActivitiy;
 
 import butterknife.BindView;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements MainActivityPresenter.MainActivityView {
 
     //1)TÜRBÜLANS AKIMI HESAPLAMA
     //2)BORUNUN EKONOMİK ÇAPINI HESAPLAMA
@@ -38,40 +38,30 @@ public class MainActivity extends BaseActivity {
     MaterialButton btnCircularRoutesCalculateOfChargeLoadSoft;
 
 
+    private MainActivityPresenter presenter;
+
     @Override
     protected void viewDidLoad() {
-
+        presenter = new MainActivityPresenter(this, this);
         setupListeners();
 
     }
 
     private void setupListeners() {
 
-        btnCalculateTurbulance.setOnClickListener(v -> {
+        btnCalculateTurbulance.setOnClickListener(v -> presenter.navigate(TurbulanceCurrentActivitiy.class));
 
-            Intent intent = new Intent(this, TurbulanceCurrentActivitiy.class);
-            startActivity(intent);
+        btnCalculateEconomicDiameter.setOnClickListener(v -> presenter.navigate(CalculateEconomicDiameterOfThePipeActivity.class));
 
-        });
+        btnCalculateOfLoadLoses.setOnClickListener(v -> presenter.navigate(CalculateOfLoadLosesActivity.class));
 
-        btnCalculateEconomicDiameter.setOnClickListener(v -> {
+        btnCircularRoutesCalculateOfChargeLoadSoft.setOnClickListener(v -> presenter.navigate(CircularRoutesCalculateOfChargeLoadSoftActivity.class));
 
-            Intent intent = new Intent(this, CalculateEconomicDiameterOfThePipeActivity.class);
-            startActivity(intent);
-        });
+    }
 
-        btnCalculateOfLoadLoses.setOnClickListener(v -> {
-
-            Intent intent = new Intent(this, CalculateOfLoadLosesActivity.class);
-            startActivity(intent);
-        });
-
-        btnCircularRoutesCalculateOfChargeLoadSoft.setOnClickListener(v -> {
-            Intent intent = new Intent(this, CircularRoutesCalculateOfChargeLoadSoftActivity.class);
-            startActivity(intent);
-        });
-
-
+    @Override
+    public void navigate(Intent intent) {
+        startActivity(intent);
     }
 
 
@@ -84,4 +74,6 @@ public class MainActivity extends BaseActivity {
     public String setHeaderText() {
         return null;
     }
+
+
 }
