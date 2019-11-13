@@ -1,5 +1,6 @@
 package com.nuriefeoglu.mbuproject.calculateEconomicDiameterOfThePipe;
 
+import android.view.View;
 import android.widget.TextView;
 
 import com.google.android.material.button.MaterialButton;
@@ -10,7 +11,8 @@ import com.nuriefeoglu.mbuproject.base.BaseActivity;
 
 import butterknife.BindView;
 
-public class CalculateEconomicDiameterOfThePipeActivity extends BaseActivity implements ICalculateEconomicDiameterOfThePipeView {
+
+public class CalculateEconomicDiameterOfThePipeActivity extends BaseActivity implements CalculateEconomicDiameterOfThePipePresenter.IView {
 
     @BindView(R.id.edt_gunluk_calisma_saati)
     TextInputEditText edtGunlukCalismaSaati;
@@ -26,6 +28,8 @@ public class CalculateEconomicDiameterOfThePipeActivity extends BaseActivity imp
     @BindView(R.id.txt_sonuc)
     TextView txtSonuc;
 
+    private CalculateEconomicDiameterOfThePipePresenter presenter;
+
 
     @Override
     protected int layoutRes() {
@@ -37,37 +41,38 @@ public class CalculateEconomicDiameterOfThePipeActivity extends BaseActivity imp
         return getStringResource(R.string.calculate_economic_diameter_of_the_pipe);
     }
 
-    @Override
-    public void setupButtonListener() {
 
-
-    }
-
-
-    @SuppressWarnings("ConstantConditions")
     @Override
     protected void viewDidLoad() {
 
+        presenter = new CalculateEconomicDiameterOfThePipePresenter(this);
         btnHesapla.setOnClickListener(v -> {
-            if (!edtGunlukCalismaSaati.getText().toString().matches("") &&
-                    !edtKwSaatFiyati.getText().toString().matches("") &&
-                    !edtBirimBoyFiyati.getText().toString().matches("") &&
-                    !edtDebiDegeri.getText().toString().matches("")) {
-
-                Double result = Formulas.calculateEconomicDiameterOfThePipe(
-                        Double.parseDouble(edtGunlukCalismaSaati.getText().toString()),
-                        Double.parseDouble(edtKwSaatFiyati.getText().toString()),
-                        Double.parseDouble(edtBirimBoyFiyati.getText().toString()),
-                        Double.parseDouble(edtDebiDegeri.getText().toString()));
-                txtSonuc.setText(String.format("Sonuç : %s", result));
-
-            } else {
-                showToast(getStringResource(R.string.empty_field));
-            }
+            //noinspection ConstantConditions
+            presenter.validate(edtGunlukCalismaSaati.getText().toString(),
+                    edtKwSaatFiyati.getText().toString(),
+                    edtBirimBoyFiyati.getText().toString(),
+                    edtDebiDegeri.getText().toString());
         });
-
-
     }
 
 
+    @Override
+    public void setError() {
+        showToast(getStringResource(R.string.empty_field));
+    }
+
+    @Override
+    public void setResult(String result) {
+        txtSonuc.setText(String.format("Sonuç : %s", result));
+    }
+
+    @Override
+    public void setButtonEnabled() {
+        btnHesapla.setEnabled(true);
+    }
+
+    @Override
+    public void setButtonDisabled() {
+        btnHesapla.setEnabled(false);
+    }
 }
