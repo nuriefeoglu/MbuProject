@@ -160,7 +160,7 @@ public class Formulas {
     /**
      * @tag = 9
      */
-    public static Double manningStricklerMethodSame(Double n, Double R, Double V) {
+    public static Double darcyWeisbachMethod(Double n, Double R, Double V) {
         //J = yük kaybı
         //n = Manning formülünde pürüzlülük katsayısı
         //V = ortalama sıvı akış hızı
