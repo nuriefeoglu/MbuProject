@@ -1,6 +1,6 @@
 package com.nuriefeoglu.mbuproject;
 
-public interface IFormulasView {
+public interface IFormulas {
     Double turbulanceCurrent(Double v, Double d, Double kv);
 
     Double calculateEconomicDiameterOfThePipe(Double n, Double e, Double f, Double q);
