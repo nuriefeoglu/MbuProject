@@ -8,6 +8,7 @@ import com.nuriefeoglu.mbuproject.base.BaseActivity;
 import com.nuriefeoglu.mbuproject.calculateEconomicDiameterOfThePipe.CalculateEconomicDiameterOfThePipeActivity;
 import com.nuriefeoglu.mbuproject.calculateofloadloses.CalculateOfLoadLosesActivity;
 import com.nuriefeoglu.mbuproject.circularroutescalculateofchargeloadsoft.CircularRoutesCalculateOfChargeLoadSoftActivity;
+import com.nuriefeoglu.mbuproject.circularroutescalculateofloadloseshard.CircularRoutesCalculateOfLoadLosesHardActivity;
 import com.nuriefeoglu.mbuproject.turbulancecurrent.TurbulanceCurrentActivitiy;
 
 import butterknife.BindView;
@@ -36,6 +37,8 @@ public class MainActivity extends BaseActivity implements MainActivityPresenter.
     MaterialButton btnCalculateOfLoadLoses;
     @BindView(R.id.btnCircularRoutesCalculateOfChargeLoadSoft)
     MaterialButton btnCircularRoutesCalculateOfChargeLoadSoft;
+    @BindView(R.id.btnCircularRoutesCalculateOfChargeLoadHard)
+    MaterialButton btnCircularRoutesCalculateOfChargeLoadHard;
 
 
     private MainActivityPresenter presenter;
@@ -56,6 +59,8 @@ public class MainActivity extends BaseActivity implements MainActivityPresenter.
         btnCalculateOfLoadLoses.setOnClickListener(v -> presenter.navigate(CalculateOfLoadLosesActivity.class));
 
         btnCircularRoutesCalculateOfChargeLoadSoft.setOnClickListener(v -> presenter.navigate(CircularRoutesCalculateOfChargeLoadSoftActivity.class));
+
+        btnCircularRoutesCalculateOfChargeLoadHard.setOnClickListener(v -> presenter.navigate(CircularRoutesCalculateOfLoadLosesHardActivity.class));
 
     }
 

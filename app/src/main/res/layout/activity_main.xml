@@ -63,6 +63,19 @@
             android:text="@string/circular_routes_calculate_of_charge_load_soft"
             android:textAllCaps="false" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCircularRoutesCalculateOfChargeLoadHard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_margin_top"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:stateListAnimator="@null"
+            android:text="@string/circular_routes_calculate_of_charge_load_hard"
+            android:textAllCaps="false" />
+
         <include
             android:id="@+id/incHeader"
             layout="@layout/header"

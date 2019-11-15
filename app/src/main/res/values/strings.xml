@@ -20,4 +20,5 @@
     <string name="circular_routes_calculate_of_charge_load_soft">Dairesel Dönüşlü Yük Kaybı Hesaplanması</string>
     <string name="aci_degeri_input">Açı Değerini Giriniz</string>
     <string name="kivrim_yaricap">Kıvrımın Yarıçapını Giriniz</string>
+    <string name="circular_routes_calculate_of_charge_load_hard">Keskin Dönüşlü Yük Kaybı Hesaplama</string>
 </resources>

@@ -12,12 +12,10 @@ import com.nuriefeoglu.mbuproject.IFormulas;
 import com.nuriefeoglu.mbuproject.R;
 import com.nuriefeoglu.mbuproject.base.BaseActivity;
 
-import java.util.Objects;
-
 import androidx.appcompat.widget.AppCompatSpinner;
 import butterknife.BindView;
 
-public abstract class TurbulanceCurrentActivitiy extends BaseActivity implements ITurbulanceCurrentView, IFormulas {
+public class TurbulanceCurrentActivitiy extends BaseActivity implements ITurbulanceCurrentView {
 
     String[] temperatureArr = {"0", "10", "20", "30", "40", "50", "60"};
     String[] temperatureOutputArr = {"1.79", "1.31", "1.01", "0.804", "0.661", "0.556", "0.447"};
@@ -95,15 +93,9 @@ public abstract class TurbulanceCurrentActivitiy extends BaseActivity implements
             }
         });
     }
-
-/*
-    @SuppressWarnings("InfiniteRecursion")
-    @Override
-    public Double turbulanceCurrent(Double v, Double d, Double kv) {
-        return turbulanceCurrent(Double.parseDouble(Objects.requireNonNull(edtAkiskanHizi.getText()).toString()),
-                Double.parseDouble(Objects.requireNonNull(edtBoruIcCap.getText()).toString()),
-                Double.parseDouble(temperatureOutput.toString()));
-    }
-
- */
+//
+//    @Override
+//    public Double turbulanceCurrent(Double v, Double d, Double kv) {
+//        return (v * d) / kv;
+//    }
 }
