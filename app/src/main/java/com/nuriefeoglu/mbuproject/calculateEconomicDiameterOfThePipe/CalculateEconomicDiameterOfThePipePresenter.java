@@ -39,9 +39,9 @@ public class CalculateEconomicDiameterOfThePipePresenter {
                 return;
             } else {
                 pipesArr.add(Double.parseDouble(pipe));
-                calculate();
             }
         }
+        calculate();
     }
 
 

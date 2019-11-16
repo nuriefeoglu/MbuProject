@@ -39,9 +39,9 @@ public class CircularRoutesCalculateOfLoadLosesHardPresenter {
                 return;
             } else {
                 pipesArr.add(Double.parseDouble(pipe));
-                calculate();
             }
         }
+        calculate();
     }
 
 
