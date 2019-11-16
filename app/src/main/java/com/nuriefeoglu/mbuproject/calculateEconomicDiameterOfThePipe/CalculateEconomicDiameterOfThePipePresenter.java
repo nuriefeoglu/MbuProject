@@ -1,5 +1,7 @@
 package com.nuriefeoglu.mbuproject.calculateEconomicDiameterOfThePipe;
 
+import android.util.Log;
+
 import com.nuriefeoglu.mbuproject.Formulas;
 
 import java.util.ArrayList;
@@ -30,6 +32,7 @@ public class CalculateEconomicDiameterOfThePipePresenter {
 
 
     void validate(String... pipes) {
+        pipesArr.clear();
         view.setButtonDisabled();
         for (String pipe : pipes) {
             if (pipe.isEmpty() || pipe.matches("")) {
