@@ -27,4 +27,7 @@
     <string name="input_expanding_conic">Genişleme Açısı</string>
     <string name="genisleme_oncesi_boru_ic_cap">Genişleme Öncesi Borunun İç Çapını Giriniz</string>
     <string name="genisleme_sonrasi_boru_ic_capi">Genişleme Öncesi Boru İç Çapını Giriniz</string>
+    <string name="sudden_contraction">Çapta Ani Değişimlerde Yük Kaybı Hesaplama</string>
+    <string name="daralma_sonrasi_hizi">Daralma Sonrası Akışkan Hızını Giriniz</string>
+    <string name="yuk_kaybi_katsayisi">Yük Kaybı Katsayısını Giriniz</string>
 </resources>

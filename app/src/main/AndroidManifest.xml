@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".calculateexpandingconic.CalculateExpandingConicActivity"></activity>
+        <activity android:name=".suddencontraction.SuddenContractionActivity"></activity>
+        <activity android:name=".calculateexpandingconic.CalculateExpandingConicActivity" />
         <activity android:name=".branchingandconnectioncurrent.BranchingAndConnectionCurrentActivity" />
         <activity android:name=".circularroutescalculateofloadloseshard.CircularRoutesCalculateOfLoadLosesHardActivity" />
         <activity android:name=".circularroutescalculateofchargeloadsoft.CircularRoutesCalculateOfChargeLoadSoftActivity" />

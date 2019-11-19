@@ -102,6 +102,19 @@
             android:text="@string/calculate_expanding_conic"
             android:textAllCaps="false" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSuddenContraction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_margin_top"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:stateListAnimator="@null"
+            android:text="@string/sudden_contraction"
+            android:textAllCaps="false" />
+
 
         <include
             android:id="@+id/incHeader"

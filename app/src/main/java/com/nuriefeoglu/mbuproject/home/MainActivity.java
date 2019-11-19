@@ -11,6 +11,8 @@ import com.nuriefeoglu.mbuproject.calculateexpandingconic.CalculateExpandingConi
 import com.nuriefeoglu.mbuproject.calculateofloadloses.CalculateOfLoadLosesActivity;
 import com.nuriefeoglu.mbuproject.circularroutescalculateofchargeloadsoft.CircularRoutesCalculateOfChargeLoadSoftActivity;
 import com.nuriefeoglu.mbuproject.circularroutescalculateofloadloseshard.CircularRoutesCalculateOfLoadLosesHardActivity;
+import com.nuriefeoglu.mbuproject.suddencontraction.SuddenContractionActivity;
+import com.nuriefeoglu.mbuproject.suddencontraction.SuddenContractionPresenter;
 import com.nuriefeoglu.mbuproject.turbulancecurrent.TurbulanceCurrentActivitiy;
 
 import butterknife.BindView;
@@ -45,6 +47,8 @@ public class MainActivity extends BaseActivity implements MainActivityPresenter.
     MaterialButton btnBranchingAndConnectionCurrent;
     @BindView(R.id.btnCalculateExpandingConic)
     MaterialButton btnCalculateExpandingConic;
+    @BindView(R.id.btnSuddenContraction)
+    MaterialButton btnSuddenContraction;
 
     private MainActivityPresenter presenter;
 
@@ -70,6 +74,8 @@ public class MainActivity extends BaseActivity implements MainActivityPresenter.
         btnBranchingAndConnectionCurrent.setOnClickListener(v -> presenter.navigate(BranchingAndConnectionCurrentActivity.class));
 
         btnCalculateExpandingConic.setOnClickListener(v -> presenter.navigate(CalculateExpandingConicActivity.class));
+
+        btnSuddenContraction.setOnClickListener(v -> presenter.navigate(SuddenContractionActivity.class));
 
     }
 

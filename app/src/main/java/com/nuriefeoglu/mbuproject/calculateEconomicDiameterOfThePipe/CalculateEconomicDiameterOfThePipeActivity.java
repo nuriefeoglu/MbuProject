@@ -1,11 +1,9 @@
 package com.nuriefeoglu.mbuproject.calculateEconomicDiameterOfThePipe;
 
-import android.view.View;
 import android.widget.TextView;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
-import com.nuriefeoglu.mbuproject.Formulas;
 import com.nuriefeoglu.mbuproject.R;
 import com.nuriefeoglu.mbuproject.base.BaseActivity;
 
