@@ -11,8 +11,8 @@ import com.nuriefeoglu.mbuproject.calculateexpandingconic.CalculateExpandingConi
 import com.nuriefeoglu.mbuproject.calculateofloadloses.CalculateOfLoadLosesActivity;
 import com.nuriefeoglu.mbuproject.circularroutescalculateofchargeloadsoft.CircularRoutesCalculateOfChargeLoadSoftActivity;
 import com.nuriefeoglu.mbuproject.circularroutescalculateofloadloseshard.CircularRoutesCalculateOfLoadLosesHardActivity;
+import com.nuriefeoglu.mbuproject.darcyweisbachmethod.DarcyWeisbachMethodActivity;
 import com.nuriefeoglu.mbuproject.suddencontraction.SuddenContractionActivity;
-import com.nuriefeoglu.mbuproject.suddencontraction.SuddenContractionPresenter;
 import com.nuriefeoglu.mbuproject.turbulancecurrent.TurbulanceCurrentActivitiy;
 
 import butterknife.BindView;
@@ -49,6 +49,8 @@ public class MainActivity extends BaseActivity implements MainActivityPresenter.
     MaterialButton btnCalculateExpandingConic;
     @BindView(R.id.btnSuddenContraction)
     MaterialButton btnSuddenContraction;
+    @BindView(R.id.btnDarcyWeisbachMethod)
+    MaterialButton btnDarcyWeisbachMethod;
 
     private MainActivityPresenter presenter;
 
@@ -76,6 +78,8 @@ public class MainActivity extends BaseActivity implements MainActivityPresenter.
         btnCalculateExpandingConic.setOnClickListener(v -> presenter.navigate(CalculateExpandingConicActivity.class));
 
         btnSuddenContraction.setOnClickListener(v -> presenter.navigate(SuddenContractionActivity.class));
+
+        btnDarcyWeisbachMethod.setOnClickListener(v -> presenter.navigate(DarcyWeisbachMethodActivity.class));
 
     }
 

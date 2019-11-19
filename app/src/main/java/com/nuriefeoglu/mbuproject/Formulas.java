@@ -156,10 +156,13 @@ public class Formulas {
     }
 
     //KISMEN DOLU HATLARDAKİ YÜK KAYIPLARI
+/*
 
-    /**
+    */
+/**
      * @tag = 9
-     */
+     *//*
+
     public static Double darcyWeisbachMethod(Double n, Double R, Double V) {
         //J = yük kaybı
         //n = Manning formülünde pürüzlülük katsayısı
@@ -170,6 +173,7 @@ public class Formulas {
         J = Math.pow(V * n * (1 / Math.pow(R, 2 / 3)), 2);
         return J;
     }
+*/
 
     //TAM DOLU BORU HATLARINDA YÜK KAYBI
 

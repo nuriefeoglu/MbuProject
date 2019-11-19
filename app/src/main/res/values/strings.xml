@@ -30,4 +30,6 @@
     <string name="sudden_contraction">Çapta Ani Değişimlerde Yük Kaybı Hesaplama</string>
     <string name="daralma_sonrasi_hizi">Daralma Sonrası Akışkan Hızını Giriniz</string>
     <string name="yuk_kaybi_katsayisi">Yük Kaybı Katsayısını Giriniz</string>
+    <string name="darcy_weisbach_method">Tam Dolu Borularda Yük Kayıplarının Hesaplanması (Darcy Weisbach Metodu)</string>
+    <string name="input_lamda">Lamda Değerini Giriniz</string>
 </resources>

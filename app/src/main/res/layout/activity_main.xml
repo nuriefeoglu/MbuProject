@@ -115,11 +115,23 @@
             android:text="@string/sudden_contraction"
             android:textAllCaps="false" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDarcyWeisbachMethod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_margin_top"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:stateListAnimator="@null"
+            android:text="@string/darcy_weisbach_method"
+            android:textAllCaps="false" />
 
         <include
             android:id="@+id/incHeader"
             layout="@layout/header"
-            android:visibility="gone" />
+            android:visibility="gone"/>
 
 
     </LinearLayout>
