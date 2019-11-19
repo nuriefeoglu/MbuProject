@@ -30,9 +30,10 @@ public class CircularRoutesCalculateOfLoadLosesHardPresenter {
     }
 
     void validate(String... pipes) {
+        pipesArr.clear();
         view.setButtonDisabled();
         for (String pipe : pipes) {
-            if (pipe.isEmpty() && pipe.matches("")) {
+            if (pipe.isEmpty() || pipe.matches("")) {
                 view.setError();
                 pipesArr.clear();
                 view.setButtonEnabled();

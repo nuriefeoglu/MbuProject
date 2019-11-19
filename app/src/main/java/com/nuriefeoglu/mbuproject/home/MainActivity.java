@@ -5,6 +5,7 @@ import android.content.Intent;
 import com.google.android.material.button.MaterialButton;
 import com.nuriefeoglu.mbuproject.R;
 import com.nuriefeoglu.mbuproject.base.BaseActivity;
+import com.nuriefeoglu.mbuproject.branchingandconnectioncurrent.BranchingAndConnectionCurrentActivity;
 import com.nuriefeoglu.mbuproject.calculateEconomicDiameterOfThePipe.CalculateEconomicDiameterOfThePipeActivity;
 import com.nuriefeoglu.mbuproject.calculateofloadloses.CalculateOfLoadLosesActivity;
 import com.nuriefeoglu.mbuproject.circularroutescalculateofchargeloadsoft.CircularRoutesCalculateOfChargeLoadSoftActivity;
@@ -39,6 +40,8 @@ public class MainActivity extends BaseActivity implements MainActivityPresenter.
     MaterialButton btnCircularRoutesCalculateOfChargeLoadSoft;
     @BindView(R.id.btnCircularRoutesCalculateOfChargeLoadHard)
     MaterialButton btnCircularRoutesCalculateOfChargeLoadHard;
+    @BindView(R.id.btnBranchingAndConnectionCurrent)
+    MaterialButton btnBranchingAndConnectionCurrent;
 
 
     private MainActivityPresenter presenter;
@@ -61,6 +64,8 @@ public class MainActivity extends BaseActivity implements MainActivityPresenter.
         btnCircularRoutesCalculateOfChargeLoadSoft.setOnClickListener(v -> presenter.navigate(CircularRoutesCalculateOfChargeLoadSoftActivity.class));
 
         btnCircularRoutesCalculateOfChargeLoadHard.setOnClickListener(v -> presenter.navigate(CircularRoutesCalculateOfLoadLosesHardActivity.class));
+
+        btnBranchingAndConnectionCurrent.setOnClickListener(v -> presenter.navigate(BranchingAndConnectionCurrentActivity.class));
 
     }
 
