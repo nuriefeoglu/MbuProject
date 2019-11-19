@@ -12,6 +12,7 @@ import com.nuriefeoglu.mbuproject.calculateofloadloses.CalculateOfLoadLosesActiv
 import com.nuriefeoglu.mbuproject.circularroutescalculateofchargeloadsoft.CircularRoutesCalculateOfChargeLoadSoftActivity;
 import com.nuriefeoglu.mbuproject.circularroutescalculateofloadloseshard.CircularRoutesCalculateOfLoadLosesHardActivity;
 import com.nuriefeoglu.mbuproject.darcyweisbachmethod.DarcyWeisbachMethodActivity;
+import com.nuriefeoglu.mbuproject.darcyweisbachmethodfullstack.DarcyWeisbachMethodFullStackActivity;
 import com.nuriefeoglu.mbuproject.suddencontraction.SuddenContractionActivity;
 import com.nuriefeoglu.mbuproject.turbulancecurrent.TurbulanceCurrentActivitiy;
 
@@ -28,7 +29,7 @@ public class MainActivity extends BaseActivity implements MainActivityPresenter.
     //7)AÇILAN KONUKLERDE YÜK KAYBI HESAPLAMA
     //8)ÇAPTA ANİ DEĞİŞİMLERDE BORUNUN YÜK KAYBINI HESAPLAMA
     //9)TAM DOLU BORULARDA YÜK KAYBI HESAPLAMA (DARCY-WEİSBACH)
-    //10)KISMEN DOLU BORULARDAKİ YÜK KAYBI HESAPLAMA (MANNİNG-STRİCKER)
+    //10)KISMEN DOLU BORULARDAKİ YÜK KAYBI HESAPLAMA (DARCY-WEİSBACH)
     //11)TAM DOLU BORULARDA YÜK KAYBI HESAPLAMA (MANNİNG-STRİCKER)
     //12)TAM DOLU BORULARDA YÜK KAYBI HESAPLAMA (HAZEN-WİLLİAMS)
     //13)TAM DOLU BORULARDA YÜK KAYBI HESAPLAMA (COLEBROOK-WHİTE)
@@ -51,6 +52,8 @@ public class MainActivity extends BaseActivity implements MainActivityPresenter.
     MaterialButton btnSuddenContraction;
     @BindView(R.id.btnDarcyWeisbachMethod)
     MaterialButton btnDarcyWeisbachMethod;
+    @BindView(R.id.btnDarcyWeisbachMethodFullStack)
+    MaterialButton btnDarcyWeisbachMethodFullStack;
 
     private MainActivityPresenter presenter;
 
@@ -80,6 +83,8 @@ public class MainActivity extends BaseActivity implements MainActivityPresenter.
         btnSuddenContraction.setOnClickListener(v -> presenter.navigate(SuddenContractionActivity.class));
 
         btnDarcyWeisbachMethod.setOnClickListener(v -> presenter.navigate(DarcyWeisbachMethodActivity.class));
+
+        btnDarcyWeisbachMethodFullStack.setOnClickListener(v -> presenter.navigate(DarcyWeisbachMethodFullStackActivity.class));
 
     }
 

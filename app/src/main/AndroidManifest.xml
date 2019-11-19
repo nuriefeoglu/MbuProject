@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".darcyweisbachmethod.DarcyWeisbachMethodActivity"></activity>
+        <activity android:name=".darcyweisbachmethodfullstack.DarcyWeisbachMethodFullStackActivity"></activity>
+        <activity android:name=".darcyweisbachmethod.DarcyWeisbachMethodActivity" />
         <activity android:name=".suddencontraction.SuddenContractionActivity" />
         <activity android:name=".calculateexpandingconic.CalculateExpandingConicActivity" />
         <activity android:name=".branchingandconnectioncurrent.BranchingAndConnectionCurrentActivity" />
