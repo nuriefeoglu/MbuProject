@@ -23,4 +23,8 @@
     <string name="circular_routes_calculate_of_charge_load_hard">Keskin Dönüşlü Yük Kaybı Hesaplama</string>
     <string name="branching_and_connection_current">Gidiş İstikametinde Dallanan Ve Bağlanan Borıların Yük Kayıplarını Hesaplama</string>
     <string name="input_kr_kb">Kr/Kb Değerini Giriniz</string>
+    <string name="calculate_expanding_conic">Açılan Koniklerde Yük Kaybı Hesaplama</string>
+    <string name="input_expanding_conic">Genişleme Açısı</string>
+    <string name="genisleme_oncesi_boru_ic_cap">Genişleme Öncesi Borunun İç Çapını Giriniz</string>
+    <string name="genisleme_sonrasi_boru_ic_capi">Genişleme Öncesi Boru İç Çapını Giriniz</string>
 </resources>

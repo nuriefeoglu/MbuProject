@@ -7,6 +7,7 @@ import com.nuriefeoglu.mbuproject.R;
 import com.nuriefeoglu.mbuproject.base.BaseActivity;
 import com.nuriefeoglu.mbuproject.branchingandconnectioncurrent.BranchingAndConnectionCurrentActivity;
 import com.nuriefeoglu.mbuproject.calculateEconomicDiameterOfThePipe.CalculateEconomicDiameterOfThePipeActivity;
+import com.nuriefeoglu.mbuproject.calculateexpandingconic.CalculateExpandingConicActivity;
 import com.nuriefeoglu.mbuproject.calculateofloadloses.CalculateOfLoadLosesActivity;
 import com.nuriefeoglu.mbuproject.circularroutescalculateofchargeloadsoft.CircularRoutesCalculateOfChargeLoadSoftActivity;
 import com.nuriefeoglu.mbuproject.circularroutescalculateofloadloseshard.CircularRoutesCalculateOfLoadLosesHardActivity;
@@ -42,7 +43,8 @@ public class MainActivity extends BaseActivity implements MainActivityPresenter.
     MaterialButton btnCircularRoutesCalculateOfChargeLoadHard;
     @BindView(R.id.btnBranchingAndConnectionCurrent)
     MaterialButton btnBranchingAndConnectionCurrent;
-
+    @BindView(R.id.btnCalculateExpandingConic)
+    MaterialButton btnCalculateExpandingConic;
 
     private MainActivityPresenter presenter;
 
@@ -66,6 +68,8 @@ public class MainActivity extends BaseActivity implements MainActivityPresenter.
         btnCircularRoutesCalculateOfChargeLoadHard.setOnClickListener(v -> presenter.navigate(CircularRoutesCalculateOfLoadLosesHardActivity.class));
 
         btnBranchingAndConnectionCurrent.setOnClickListener(v -> presenter.navigate(BranchingAndConnectionCurrentActivity.class));
+
+        btnCalculateExpandingConic.setOnClickListener(v -> presenter.navigate(CalculateExpandingConicActivity.class));
 
     }
 
