@@ -35,4 +35,6 @@
     <string name="darcy_weisbach_method_full_stack">Tam Dolu Borularda Yük Kayıplarının Hesaplanması (Darcy Weisbach Metodu)</string>
     <string name="puruzluluk_katsayisi">Pürüzlülük Katsayısı</string>
     <string name="hidrolik_yaricap">Hidrolik Yarıçap</string>
+    <string name="ortalama_akiskan_hizi">Ortalama Akışkan Hızı</string>
+    <string name="manning_strickler_method_full">Tam Dolu Borularda Yük Kayıplarının Hesaplanması (Manning Strickler Metodu)</string>
 </resources>

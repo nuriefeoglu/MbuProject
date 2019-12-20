@@ -13,6 +13,7 @@ import com.nuriefeoglu.mbuproject.circularroutescalculateofchargeloadsoft.Circul
 import com.nuriefeoglu.mbuproject.circularroutescalculateofloadloseshard.CircularRoutesCalculateOfLoadLosesHardActivity;
 import com.nuriefeoglu.mbuproject.darcyweisbachmethod.DarcyWeisbachMethodActivity;
 import com.nuriefeoglu.mbuproject.darcyweisbachmethodfullstack.DarcyWeisbachMethodFullStackActivity;
+import com.nuriefeoglu.mbuproject.manningstricklermethodfull.ManningStricklerMethodFullActivity;
 import com.nuriefeoglu.mbuproject.suddencontraction.SuddenContractionActivity;
 import com.nuriefeoglu.mbuproject.turbulancecurrent.TurbulanceCurrentActivitiy;
 
@@ -54,6 +55,8 @@ public class MainActivity extends BaseActivity implements MainActivityPresenter.
     MaterialButton btnDarcyWeisbachMethod;
     @BindView(R.id.btnDarcyWeisbachMethodFullStack)
     MaterialButton btnDarcyWeisbachMethodFullStack;
+    @BindView(R.id.btnManningStricklerMethodFull)
+    MaterialButton btnManningStricklerMethodFull;
 
     private MainActivityPresenter presenter;
 
@@ -85,6 +88,8 @@ public class MainActivity extends BaseActivity implements MainActivityPresenter.
         btnDarcyWeisbachMethod.setOnClickListener(v -> presenter.navigate(DarcyWeisbachMethodActivity.class));
 
         btnDarcyWeisbachMethodFullStack.setOnClickListener(v -> presenter.navigate(DarcyWeisbachMethodFullStackActivity.class));
+
+        btnManningStricklerMethodFull.setOnClickListener(v -> presenter.navigate(ManningStricklerMethodFullActivity.class));
 
     }
 
