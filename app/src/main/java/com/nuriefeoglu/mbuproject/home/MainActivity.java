@@ -4,6 +4,7 @@ import android.content.Intent;
 
 import com.google.android.material.button.MaterialButton;
 import com.nuriefeoglu.mbuproject.R;
+import com.nuriefeoglu.mbuproject.aboutpage.AboutPageActivity;
 import com.nuriefeoglu.mbuproject.base.BaseActivity;
 import com.nuriefeoglu.mbuproject.branchingandconnectioncurrent.BranchingAndConnectionCurrentActivity;
 import com.nuriefeoglu.mbuproject.calculateEconomicDiameterOfThePipe.CalculateEconomicDiameterOfThePipeActivity;
@@ -104,7 +105,7 @@ public class MainActivity extends BaseActivity implements MainActivityPresenter.
 
         btnColebrookWhiteMethod.setOnClickListener(v -> {presenter.navigate(ColebrookWhiteMethodActivity.class);});
 
-        btnAboutPage.setOnClickListener(v -> {presenter.navigate(ColebrookWhiteMethodActivity.class);});
+        btnAboutPage.setOnClickListener(v -> {presenter.navigate(AboutPageActivity.class);});
 
     }
 

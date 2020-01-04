@@ -175,7 +175,6 @@
             android:insetLeft="0dp"
             android:insetTop="0dp"
             android:insetRight="0dp"
-            android:insetBottom="20dp"
             android:stateListAnimator="@null"
             android:text="@string/colebrook_white_method"
             android:textAllCaps="false" />

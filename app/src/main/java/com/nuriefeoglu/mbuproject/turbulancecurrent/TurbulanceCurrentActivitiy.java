@@ -8,7 +8,6 @@ import android.widget.TextView;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.nuriefeoglu.mbuproject.Formulas;
-import com.nuriefeoglu.mbuproject.IFormulas;
 import com.nuriefeoglu.mbuproject.R;
 import com.nuriefeoglu.mbuproject.base.BaseActivity;
 
@@ -93,9 +92,5 @@ public class TurbulanceCurrentActivitiy extends BaseActivity implements ITurbula
             }
         });
     }
-//
-//    @Override
-//    public Double turbulanceCurrent(Double v, Double d, Double kv) {
-//        return (v * d) / kv;
-//    }
+
 }
