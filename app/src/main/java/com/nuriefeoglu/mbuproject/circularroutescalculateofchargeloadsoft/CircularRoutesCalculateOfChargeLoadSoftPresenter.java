@@ -1,16 +1,16 @@
-package com.nuriefeoglu.mbuproject.branchingandconnectioncurrent;
+package com.nuriefeoglu.mbuproject.circularroutescalculateofchargeloadsoft;
 
 import com.nuriefeoglu.mbuproject.Formulas;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class BranchingAndConnectionCurrentPresenter {
+public class CircularRoutesCalculateOfChargeLoadSoftPresenter {
 
     private IView view;
     private List<Double> pipeArr = new ArrayList<>();
 
-    BranchingAndConnectionCurrentPresenter(IView view){
+    CircularRoutesCalculateOfChargeLoadSoftPresenter(IView view){
         this.view = view;
     }
 
@@ -18,10 +18,10 @@ public class BranchingAndConnectionCurrentPresenter {
 
         try {
             Double result;
-            result = Formulas.branchingAndConnectionCurrent(pipeArr.get(0),pipeArr.get(1),pipeArr.get(2));
+            result = Formulas.circularRoutesCalculateOfChargeLoadSoft(pipeArr.get(0),pipeArr.get(1),pipeArr.get(2),pipeArr.get(3),pipeArr.get(4));
             view.setResult(result.toString());
             view.setButtonEnabled();
-        } catch (ArrayIndexOutOfBoundsException e){
+        }catch (ArrayIndexOutOfBoundsException e){
             e.printStackTrace();
         }
     }
@@ -35,7 +35,7 @@ public class BranchingAndConnectionCurrentPresenter {
                 pipeArr.clear();
                 view.setButtonEnabled();
                 return;
-            } else {
+            }else {
                 pipeArr.add(Double.parseDouble(pipe));
             }
         }
@@ -52,5 +52,4 @@ public class BranchingAndConnectionCurrentPresenter {
         void setButtonDisabled();
 
     }
-
 }

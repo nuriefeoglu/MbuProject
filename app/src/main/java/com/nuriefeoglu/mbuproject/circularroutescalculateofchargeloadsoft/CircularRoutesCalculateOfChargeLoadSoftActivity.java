@@ -4,13 +4,12 @@ import android.widget.TextView;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
-import com.nuriefeoglu.mbuproject.Formulas;
 import com.nuriefeoglu.mbuproject.R;
 import com.nuriefeoglu.mbuproject.base.BaseActivity;
 
 import butterknife.BindView;
 
-public class CircularRoutesCalculateOfChargeLoadSoftActivity extends BaseActivity implements ICircularRoutesCalculateOfChargeLoadSoftView {
+public class CircularRoutesCalculateOfChargeLoadSoftActivity extends BaseActivity implements CircularRoutesCalculateOfChargeLoadSoftPresenter.IView {
 
     @BindView(R.id.edt_boru_ic_cap)
     TextInputEditText edtBoruIcCap;
@@ -29,11 +28,21 @@ public class CircularRoutesCalculateOfChargeLoadSoftActivity extends BaseActivit
     @BindView(R.id.txt_sonuc)
     TextView txtSonuc;
 
+    private CircularRoutesCalculateOfChargeLoadSoftPresenter presenter;
+
     @Override
     protected void viewDidLoad() {
 
-        setupButtonListener();
+        presenter = new CircularRoutesCalculateOfChargeLoadSoftPresenter(this);
+        btnHesapla.setOnClickListener(v -> {
+            //noinspection ConstantConditions
+            presenter.validate(edtBoruIcCap.getText().toString(),
+                    edtAci.getText().toString(),
+                    edtKivrimYaricap.getText().toString(),
+                    edtAkiskanHizi.getText().toString(),
+                    edtYercekimiIvmesi.getText().toString());
 
+        });
 
     }
 
@@ -47,29 +56,23 @@ public class CircularRoutesCalculateOfChargeLoadSoftActivity extends BaseActivit
         return getStringResource(R.string.circular_routes_calculate_of_charge_load_soft);
     }
 
-    @SuppressWarnings("ConstantConditions")
     @Override
-    public void setupButtonListener() {
+    public void setError() {
+        showToast(getStringResource(R.string.empty_field));
+    }
 
-        btnHesapla.setOnClickListener(v -> {
-            if (!edtBoruIcCap.getText().toString().matches("") &&
-                    !edtAci.getText().toString().matches("") &&
-                    !edtKivrimYaricap.getText().toString().matches("") &&
-                    !edtAkiskanHizi.getText().toString().matches("") &&
-                    !edtYercekimiIvmesi.getText().toString().matches("")) {
+    @Override
+    public void setResult(String result) {
+        txtSonuc.setText(String.format("Sonuç : %s",result));
+    }
 
-                Double result = Formulas.circularRoutesCalculateOfChargeLoadSoft(
-                        Double.parseDouble(edtBoruIcCap.getText().toString()),
-                        Double.parseDouble(edtAci.getText().toString()),
-                        Double.parseDouble(edtKivrimYaricap.getText().toString()),
-                        Double.parseDouble(edtAkiskanHizi.getText().toString()),
-                        Double.parseDouble(edtYercekimiIvmesi.getText().toString())
-                );
-                txtSonuc.setText(String.format("Sonuc : %s", result));
-            } else {
-                showToast(getStringResource(R.string.empty_field));
-            }
-        });
+    @Override
+    public void setButtonEnabled() {
+        btnHesapla.setEnabled(true);
+    }
 
+    @Override
+    public void setButtonDisabled() {
+        btnHesapla.setEnabled(false);
     }
 }

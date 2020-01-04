@@ -4,13 +4,12 @@ import android.widget.TextView;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
-import com.nuriefeoglu.mbuproject.Formulas;
 import com.nuriefeoglu.mbuproject.R;
 import com.nuriefeoglu.mbuproject.base.BaseActivity;
 
 import butterknife.BindView;
 
-public class CalculateOfLoadLosesActivity extends BaseActivity implements ICalculateOfLoadLosesView {
+public class CalculateOfLoadLosesActivity extends BaseActivity implements CalculateOfLoadLosesPresenter.IView {
 
     @BindView(R.id.edt_akiskan_yogunlugu)
     TextInputEditText edtAkiskanYogunlugu;
@@ -29,16 +28,26 @@ public class CalculateOfLoadLosesActivity extends BaseActivity implements ICalcu
     @BindView(R.id.txt_sonuc)
     TextView txtSonuc;
 
+    private CalculateOfLoadLosesPresenter presenter;
+
     @Override
     protected void viewDidLoad() {
 
-        setupButtonListener();
+        presenter = new CalculateOfLoadLosesPresenter(this);
+        btnHesapla.setOnClickListener(v -> {
+            //noinspection ConstantConditions
+            presenter.validate(edtAkiskanYogunlugu.getText().toString(),
+                    edtYercekimiIvmesi.getText().toString(),
+                    edtAkiskaninYatayDuzlemeGoreKonumu.getText().toString(),
+                    edtBasincDegeri.getText().toString(),
+                    edtAkiskanHizi.getText().toString());
+        });
 
     }
 
     @Override
     protected int layoutRes() {
-        return R.layout.activity_calculate_of_load_loses;
+        return  R.layout.activity_calculate_of_load_loses;
     }
 
     @Override
@@ -46,27 +55,23 @@ public class CalculateOfLoadLosesActivity extends BaseActivity implements ICalcu
         return getStringResource(R.string.calculate_of_load_loses);
     }
 
-    @SuppressWarnings("ConstantConditions")
     @Override
-    public void setupButtonListener() {
-        btnHesapla.setOnClickListener(v -> {
-            if (!edtAkiskanYogunlugu.getText().toString().matches("") &&
-                    !edtYercekimiIvmesi.getText().toString().matches("") &&
-                    !edtAkiskaninYatayDuzlemeGoreKonumu.getText().toString().matches("") &&
-                    !edtBasincDegeri.getText().toString().matches("") &&
-                    !edtAkiskanHizi.getText().toString().matches("")) {
-                Double result = Formulas.calculateOfLoadLoses(
-                        Double.parseDouble(edtAkiskanYogunlugu.getText().toString()),
-                        Double.parseDouble(edtYercekimiIvmesi.getText().toString()),
-                        Double.parseDouble(edtAkiskaninYatayDuzlemeGoreKonumu.getText().toString()),
-                        Double.parseDouble(edtBasincDegeri.getText().toString()),
-                        Double.parseDouble(edtAkiskanHizi.getText().toString())
-                );
-                txtSonuc.setText(String.format("Sonuç : %s", result));
-            } else {
-                showToast(getStringResource(R.string.empty_field));
-            }
-        });
+    public void setError() {
+        showToast(getStringResource(R.string.empty_field));
+    }
 
+    @Override
+    public void setResult(String result) {
+        txtSonuc.setText(String.format("Sonuç :%s",result));
+    }
+
+    @Override
+    public void setButtonEnabled() {
+        btnHesapla.setEnabled(true);
+    }
+
+    @Override
+    public void setButtonDisabled() {
+        btnHesapla.setEnabled(false);
     }
 }

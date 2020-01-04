@@ -1,27 +1,25 @@
-package com.nuriefeoglu.mbuproject.branchingandconnectioncurrent;
+package com.nuriefeoglu.mbuproject.calculateofloadloses;
 
 import com.nuriefeoglu.mbuproject.Formulas;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class BranchingAndConnectionCurrentPresenter {
+public class CalculateOfLoadLosesPresenter {
 
-    private IView view;
+    private IView  view;
     private List<Double> pipeArr = new ArrayList<>();
 
-    BranchingAndConnectionCurrentPresenter(IView view){
-        this.view = view;
-    }
+    CalculateOfLoadLosesPresenter(IView view){this.view = view;}
 
     private void calculate(){
 
         try {
             Double result;
-            result = Formulas.branchingAndConnectionCurrent(pipeArr.get(0),pipeArr.get(1),pipeArr.get(2));
+            result = Formulas.calculateOfLoadLoses(pipeArr.get(0),pipeArr.get(1),pipeArr.get(2),pipeArr.get(3),pipeArr.get(4));
             view.setResult(result.toString());
             view.setButtonEnabled();
-        } catch (ArrayIndexOutOfBoundsException e){
+        }catch (ArrayIndexOutOfBoundsException e){
             e.printStackTrace();
         }
     }
@@ -35,7 +33,7 @@ public class BranchingAndConnectionCurrentPresenter {
                 pipeArr.clear();
                 view.setButtonEnabled();
                 return;
-            } else {
+            }else {
                 pipeArr.add(Double.parseDouble(pipe));
             }
         }
