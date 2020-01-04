@@ -11,6 +11,7 @@ import com.nuriefeoglu.mbuproject.calculateexpandingconic.CalculateExpandingConi
 import com.nuriefeoglu.mbuproject.calculateofloadloses.CalculateOfLoadLosesActivity;
 import com.nuriefeoglu.mbuproject.circularroutescalculateofchargeloadsoft.CircularRoutesCalculateOfChargeLoadSoftActivity;
 import com.nuriefeoglu.mbuproject.circularroutescalculateofloadloseshard.CircularRoutesCalculateOfLoadLosesHardActivity;
+import com.nuriefeoglu.mbuproject.colebrookwhitemethod.ColebrookWhiteMethodActivity;
 import com.nuriefeoglu.mbuproject.darcyweisbachmethod.DarcyWeisbachMethodActivity;
 import com.nuriefeoglu.mbuproject.darcyweisbachmethodfullstack.DarcyWeisbachMethodFullStackActivity;
 import com.nuriefeoglu.mbuproject.hazenwilliamsmethodfull.HazenWilliamsMethodFullActivity;
@@ -60,6 +61,8 @@ public class MainActivity extends BaseActivity implements MainActivityPresenter.
     MaterialButton btnManningStricklerMethodFull;
     @BindView(R.id.btnHazenWilliamsMethodFull)
     MaterialButton btnHazenWilliamsMethodFull;
+    @BindView(R.id.btnColebrookWhiteMethod)
+    MaterialButton btnColebrookWhiteMethod;
 
     private MainActivityPresenter presenter;
 
@@ -95,6 +98,8 @@ public class MainActivity extends BaseActivity implements MainActivityPresenter.
         btnManningStricklerMethodFull.setOnClickListener(v -> presenter.navigate(ManningStricklerMethodFullActivity.class));
 
         btnHazenWilliamsMethodFull.setOnClickListener(v -> {presenter.navigate(HazenWilliamsMethodFullActivity.class);});
+
+        btnColebrookWhiteMethod.setOnClickListener(v -> {presenter.navigate(ColebrookWhiteMethodActivity.class);});
 
     }
 

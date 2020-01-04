@@ -11,7 +11,6 @@
     <string name="kw_saat_fiyati">Kw/Saat Fiyatı Giriniz</string>
     <string name="birim_boy_maliyet">Birim Boy Fiyatını Giriniz</string>
     <string name="debi">Debi Değerini Giriniz</string>
-    <string name="debis">Debi Değerini Giriniz</string>
     <string name="akiskan_yogunlugu">Akışkanın Yoğunluğunu Giriniz</string>
     <string name="yercekimi_ivmesi">Yerçekimi İvmesini Giriniz</string>
     <string name="yatay_duzlem_konumu">Akışkanın Yatay Düzleme Göre Konumunu Giriniz</string>
@@ -37,6 +36,9 @@
     <string name="hidrolik_yaricap">Hidrolik Yarıçap</string>
     <string name="ortalama_akiskan_hizi">Ortalama Akışkan Hızı</string>
     <string name="manning_strickler_method_full">Tam Dolu Borularda Yük Kayıplarının Hesaplanması (Manning Strickler Metodu)</string>
-    <string name="hazen_williams_method">Tam Dolu Borularda Yük Kayıplarının Hesaplanması (Hazen Williams Method)</string>
+    <string name="hazen_williams_method">Tam Dolu Borularda Yük Kayıplarının Hesaplanması (Hazen Williams Methodu)</string>
     <string name="hazen_williams_puruzluluk_katsayisi">Hazen Williams Pürüzlülük Katsayısı</string>
+    <string name="epsilon_degeri">Epsilon Değeri(türbülans dağılma oranı)</string>
+    <string name="reynolds_katsayisi">Reynolds Katsayısını Giriniz</string>
+    <string name="colebrook_white_method">Tam Dolu Borularda Yük Kayıplarının Hesaplanması (Colebrook-White Methodu)</string>
 </resources>

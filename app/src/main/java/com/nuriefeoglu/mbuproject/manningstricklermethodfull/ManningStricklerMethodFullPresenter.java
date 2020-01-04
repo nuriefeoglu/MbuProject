@@ -17,7 +17,7 @@ public class ManningStricklerMethodFullPresenter {
     private void calculate(){
 
         try {
-            Double result = Formulas.darcyWeisbachMethod(pipesArr.get(0),pipesArr.get(1),pipesArr.get(2));
+            Double result = Formulas.manningStricklerMethodFull(pipesArr.get(0),pipesArr.get(1),pipesArr.get(2));
             view.setResult(result.toString());
             view.setButtonEnabled();
         } catch (ArrayIndexOutOfBoundsException e){

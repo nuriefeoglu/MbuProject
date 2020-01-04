@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".hazenwilliamsmethodfull.HazenWilliamsMethodFullActivity"></activity>
+        <activity android:name=".colebrookwhitemethod.ColebrookWhiteMethodActivity"></activity>
+        <activity android:name=".hazenwilliamsmethodfull.HazenWilliamsMethodFullActivity" />
         <activity android:name=".manningstricklermethodfull.ManningStricklerMethodFullActivity" />
         <activity android:name=".darcyweisbachmethodfullstack.DarcyWeisbachMethodFullStackActivity" />
         <activity android:name=".darcyweisbachmethod.DarcyWeisbachMethodActivity" />
