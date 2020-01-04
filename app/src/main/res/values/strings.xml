@@ -41,4 +41,5 @@
     <string name="epsilon_degeri">Epsilon Değeri(türbülans dağılma oranı)</string>
     <string name="reynolds_katsayisi">Reynolds Katsayısını Giriniz</string>
     <string name="colebrook_white_method">Tam Dolu Borularda Yük Kayıplarının Hesaplanması (Colebrook-White Methodu)</string>
+    <string name="about_page">Hakkında</string>
 </resources>

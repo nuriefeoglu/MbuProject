@@ -180,6 +180,19 @@
             android:text="@string/colebrook_white_method"
             android:textAllCaps="false" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAboutPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_margin_top"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="20dp"
+            android:stateListAnimator="@null"
+            android:text="@string/about_page"
+            android:textAllCaps="false" />
+
         <include
             android:id="@+id/incHeader"
             layout="@layout/header"

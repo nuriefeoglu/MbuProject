@@ -36,6 +36,7 @@ public class MainActivity extends BaseActivity implements MainActivityPresenter.
     //11)TAM DOLU BORULARDA YÜK KAYBI HESAPLAMA (MANNİNG-STRİCKER)
     //12)TAM DOLU BORULARDA YÜK KAYBI HESAPLAMA (HAZEN-WİLLİAMS)
     //13)TAM DOLU BORULARDA YÜK KAYBI HESAPLAMA (COLEBROOK-WHİTE)
+    //14)Hakkında Sayfası
 
     @BindView(R.id.btnCalculateTurbulance)
     MaterialButton btnCalculateTurbulance;
@@ -63,6 +64,8 @@ public class MainActivity extends BaseActivity implements MainActivityPresenter.
     MaterialButton btnHazenWilliamsMethodFull;
     @BindView(R.id.btnColebrookWhiteMethod)
     MaterialButton btnColebrookWhiteMethod;
+    @BindView(R.id.btnAboutPage)
+    MaterialButton btnAboutPage;
 
     private MainActivityPresenter presenter;
 
@@ -100,6 +103,8 @@ public class MainActivity extends BaseActivity implements MainActivityPresenter.
         btnHazenWilliamsMethodFull.setOnClickListener(v -> {presenter.navigate(HazenWilliamsMethodFullActivity.class);});
 
         btnColebrookWhiteMethod.setOnClickListener(v -> {presenter.navigate(ColebrookWhiteMethodActivity.class);});
+
+        btnAboutPage.setOnClickListener(v -> {presenter.navigate(ColebrookWhiteMethodActivity.class);});
 
     }
 
