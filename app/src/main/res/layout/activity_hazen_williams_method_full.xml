@@ -3,16 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".calculateofloadloses.CalculateOfLoadLosesActivity">
+    tools:context=".hazenwilliamsmethodfull.HazenWilliamsMethodFullActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
         <include
             android:id="@+id/incHeader"
-            layout="@layout/header" />
+            layout="@layout/header"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -26,7 +25,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/akiskan_yogunlugu"
+                android:hint="@string/hazen_williams_puruzluluk_katsayisi"
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -34,7 +33,7 @@
                     android:layout_height="wrap_content"
                     android:maxLines="1"
                     android:inputType="number|numberDecimal"
-                    android:id="@+id/edt_akiskan_yogunlugu"
+                    android:id="@+id/edt_hazen_williams_puruzluluk_katsayisi"
 
 
                     />
@@ -45,67 +44,6 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:hint="@string/yercekimi_ivmesi"
-                >
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:maxLines="1"
-                    android:inputType="number|numberDecimal"
-                    android:id="@+id/edt_yercekimi_ivmesi"
-
-
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:hint="@string/yatay_duzlem_konumu"
-                >
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:maxLines="1"
-                    android:inputType="number|numberDecimal"
-                    android:id="@+id/edt_yatay_duzlem_konumu"
-
-
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:hint="@string/basinc_degeri"
-                >
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:maxLines="1"
-                    android:inputType="number|numberDecimal"
-                    android:id="@+id/edt_basinc_degeri"
-
-
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
                 android:hint="@string/akiskan_hizi_input"
                 >
 
@@ -115,6 +53,25 @@
                     android:maxLines="1"
                     android:inputType="number|numberDecimal"
                     android:id="@+id/edt_akiskan_hizi"
+
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/boru_ic_cap_input"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="number|numberDecimal"
+                    android:id="@+id/edt_boru_ic_cap"
 
 
                     />
@@ -146,10 +103,7 @@
                 android:id="@+id/txt_sonuc"
                 />
 
-
         </LinearLayout>
-
-
 
     </LinearLayout>
 

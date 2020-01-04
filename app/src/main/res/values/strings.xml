@@ -37,4 +37,6 @@
     <string name="hidrolik_yaricap">Hidrolik Yarıçap</string>
     <string name="ortalama_akiskan_hizi">Ortalama Akışkan Hızı</string>
     <string name="manning_strickler_method_full">Tam Dolu Borularda Yük Kayıplarının Hesaplanması (Manning Strickler Metodu)</string>
+    <string name="hazen_williams_method">Tam Dolu Borularda Yük Kayıplarının Hesaplanması (Hazen Williams Method)</string>
+    <string name="hazen_williams_puruzluluk_katsayisi">Hazen Williams Pürüzlülük Katsayısı</string>
 </resources>
