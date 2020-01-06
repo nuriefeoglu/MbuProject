@@ -59,7 +59,7 @@ public class DarcyWeisbachMethodActivity extends BaseActivity implements DarcyWe
 
     @Override
     public void setResult(String result) {
-        txtSonuc.setText(String.format("Sonuç : %s",result));
+        txtSonuc.setText(String.format("Sonuç : %s (yük kaybı-boyutsuz)",result));
     }
 
     @Override

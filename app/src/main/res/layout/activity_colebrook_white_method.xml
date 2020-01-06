@@ -26,6 +26,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/input_margin_top"
                 android:hint="@string/epsilon_degeri"
                 >
 
@@ -45,6 +46,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/input_margin_top"
                 android:hint="@string/boru_ic_cap_input"
                 >
 
@@ -64,6 +66,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/input_margin_top"
                 android:hint="@string/reynolds_katsayisi"
                 >
 

@@ -58,7 +58,7 @@ public class BranchingAndConnectionCurrentActivity extends BaseActivity implemen
     @Override
     public void setResult(String result) {
 
-        txtSonuc.setText(String.format("Sonuc : %s", result));
+        txtSonuc.setText(String.format("Sonuc : %s (m)", result));
 
     }
 

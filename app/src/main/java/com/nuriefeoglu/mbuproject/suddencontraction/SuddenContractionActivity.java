@@ -55,7 +55,7 @@ public class SuddenContractionActivity extends BaseActivity implements SuddenCon
 
     @Override
     public void setResult(String result) {
-        txtSonuc.setText(String.format("Sonuç: %s", result));
+        txtSonuc.setText(String.format("Sonuç: %s (m)", result));
     }
 
     @Override

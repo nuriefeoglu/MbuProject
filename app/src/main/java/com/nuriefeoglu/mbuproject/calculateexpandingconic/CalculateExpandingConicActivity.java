@@ -61,7 +61,7 @@ public class CalculateExpandingConicActivity extends BaseActivity implements Cal
 
     @Override
     public void setResult(String result) {
-        txtSonuc.setText(String.format("Sonuç : %s", result));
+        txtSonuc.setText(String.format("Sonuç : %s (k-sbt)", result));
     }
 
     @Override

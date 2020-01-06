@@ -86,7 +86,7 @@ public class TurbulanceCurrentActivitiy extends BaseActivity implements ITurbula
                         Double.parseDouble(edtAkiskanHizi.getText().toString()),
                         Double.parseDouble(edtBoruIcCap.getText().toString()),
                         temperatureOutput);
-                txtSonuc.setText(String.format("Sonuç : %s", result));
+                txtSonuc.setText(String.format("Sonuç : %s (Re) ", result));
             } else {
                 showToast(getStringResource(R.string.empty_field));
             }

@@ -74,7 +74,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="Mühendislikte Bilgisayar Uygulamaları Dersi Proje Ödevi"
+            android:text="Mühendislikte Bilgisayar Uygulamaları 2019"
             android:gravity="center"
             android:textStyle="bold"
             android:textColor="@color/colorblack"
@@ -90,7 +90,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Prof. Dr. Arif Koyun"
+            android:text="Dr. Öğr. Üyesi Arif Koyun"
             android:gravity="center"
             android:textStyle="bold"
             android:textColor="@color/colorblack"

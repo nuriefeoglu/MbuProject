@@ -1,39 +1,39 @@
 <resources>
     <string name="app_name" translatable="false">MbuProject</string>
     <string name="calculate_turbulance_current" translatable="false">Türbülans Akımı Hesapla</string>
-    <string name="akiskan_hizi_input" translatable="false">Akışkan Hızı</string>
-    <string name="boru_ic_cap_input" translatable="false">Borunun İç Çapı</string>
-    <string name="sicaklik_degeri_input" translatable="false">Sıcaklık Değerini Seçiniz</string>
+    <string name="akiskan_hizi_input" translatable="false">Akışkan Hızı (m/sn)</string>
+    <string name="boru_ic_cap_input" translatable="false">Borunun İç Çapı (m)</string>
+    <string name="sicaklik_degeri_input" translatable="false">Sıcaklık Değerini Seçiniz (°C)</string>
     <string name="calculate" translatable="false">Hesapla</string>
     <string name="empty_field">Lütfen boş alanları doldurunuz</string>
     <string name="calculate_economic_diameter_of_the_pipe">Borunun Ekonomik Çapının Hesaplanması</string>
-    <string name="calisma_saati">Günlük Çalışma Saatini Giriniz</string>
-    <string name="kw_saat_fiyati">Kw/Saat Fiyatı Giriniz</string>
-    <string name="birim_boy_maliyet">Birim Boy Fiyatını Giriniz</string>
-    <string name="debi">Debi Değerini Giriniz</string>
-    <string name="akiskan_yogunlugu">Akışkanın Yoğunluğunu Giriniz</string>
-    <string name="yercekimi_ivmesi">Yerçekimi İvmesini Giriniz</string>
-    <string name="yatay_duzlem_konumu">Akışkanın Yatay Düzleme Göre Konumunu Giriniz</string>
-    <string name="basinc_degeri">Pascal Cinsinden Basınç Değerini Giriniz</string>
+    <string name="calisma_saati">Günlük Çalışma Saatini Giriniz (h/24)</string>
+    <string name="kw_saat_fiyati">Kw/Saat Fiyatı Giriniz(₺)</string>
+    <string name="birim_boy_maliyet">Birim Boy Fiyatını Giriniz(₺/m)</string>
+    <string name="debi">Debi Değerini Giriniz(m³/sn)</string>
+    <string name="akiskan_yogunlugu">Akışkanın Yoğunluğunu Giriniz (kg/m³)</string>
+    <string name="yercekimi_ivmesi">Yerçekimi İvmesini Giriniz (m/sn²)</string>
+    <string name="yatay_duzlem_konumu">Akışkanın Yatay Düzleme Göre Konumunu Giriniz (m)</string>
+    <string name="basinc_degeri">Pascal Cinsinden Basınç Değerini Giriniz (Newton/m²)</string>
     <string name="calculate_of_load_loses">Yük Kayıplarının Hesaplanması</string>
     <string name="circular_routes_calculate_of_charge_load_soft">Dairesel Dönüşlü Yük Kaybı Hesaplanması</string>
-    <string name="aci_degeri_input">Açı Değerini Giriniz</string>
-    <string name="kivrim_yaricap">Kıvrımın Yarıçapını Giriniz</string>
+    <string name="aci_degeri_input">Açı Değerini Giriniz (derece)</string>
+    <string name="kivrim_yaricap">Kıvrımın Yarıçapını Giriniz (m)</string>
     <string name="circular_routes_calculate_of_charge_load_hard">Keskin Dönüşlü Yük Kaybı Hesaplama</string>
     <string name="branching_and_connection_current">Gidiş İstikametinde Dallanan Ve Bağlanan Borıların Yük Kayıplarını Hesaplama</string>
-    <string name="input_kr_kb">Kr/Kb Değerini Giriniz</string>
+    <string name="input_kr_kb">Kr/Kb Değerini Giriniz ((m³/sn)/(m³/sn))</string>
     <string name="calculate_expanding_conic">Açılan Koniklerde Yük Kaybı Hesaplama</string>
-    <string name="input_expanding_conic">Genişleme Açısı</string>
-    <string name="genisleme_oncesi_boru_ic_cap">Genişleme Öncesi Borunun İç Çapını Giriniz</string>
-    <string name="genisleme_sonrasi_boru_ic_capi">Genişleme Öncesi Boru İç Çapını Giriniz</string>
+    <string name="input_expanding_conic">Genişleme Açısı (derece)</string>
+    <string name="genisleme_oncesi_boru_ic_cap">Genişleme Öncesi Borunun İç Çapını Giriniz (m)</string>
+    <string name="genisleme_sonrasi_boru_ic_capi">Genişleme Sonrası Boru İç Çapını Giriniz (m)</string>
     <string name="sudden_contraction">Çapta Ani Değişimlerde Yük Kaybı Hesaplama</string>
-    <string name="daralma_sonrasi_hizi">Daralma Sonrası Akışkan Hızını Giriniz</string>
-    <string name="yuk_kaybi_katsayisi">Yük Kaybı Katsayısını Giriniz</string>
+    <string name="daralma_sonrasi_hizi">Daralma Sonrası Akışkan Hızını Giriniz (m/sn)</string>
+    <string name="yuk_kaybi_katsayisi">Yük Kaybı Katsayısını Giriniz (k-sbt)</string>
     <string name="darcy_weisbach_method">Kısmen Dolu Borularda Yük Kayıplarının Hesaplanması (Darcy Weisbach Metodu)</string>
-    <string name="input_lamda">Lamda Değerini Giriniz</string>
+    <string name="input_lamda">Lamda Değerini Giriniz (yük kaybı katsayısı)</string>
     <string name="darcy_weisbach_method_full_stack">Tam Dolu Borularda Yük Kayıplarının Hesaplanması (Darcy Weisbach Metodu)</string>
     <string name="puruzluluk_katsayisi">Pürüzlülük Katsayısı</string>
-    <string name="hidrolik_yaricap">Hidrolik Yarıçap</string>
+    <string name="hidrolik_yaricap">Hidrolik Yarıçap (m)</string>
     <string name="ortalama_akiskan_hizi">Ortalama Akışkan Hızı</string>
     <string name="manning_strickler_method_full">Tam Dolu Borularda Yük Kayıplarının Hesaplanması (Manning Strickler Metodu)</string>
     <string name="hazen_williams_method">Tam Dolu Borularda Yük Kayıplarının Hesaplanması (Hazen Williams Methodu)</string>

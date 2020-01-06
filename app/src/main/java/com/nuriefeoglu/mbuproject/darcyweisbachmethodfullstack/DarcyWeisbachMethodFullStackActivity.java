@@ -55,7 +55,7 @@ public class DarcyWeisbachMethodFullStackActivity extends BaseActivity implement
 
     @Override
     public void setResult(String result) {
-        txtSonuc.setText(String.format("Sonuç : %s",result));
+        txtSonuc.setText(String.format("Sonuç : %s (k-sbt)",result));
     }
 
     @Override

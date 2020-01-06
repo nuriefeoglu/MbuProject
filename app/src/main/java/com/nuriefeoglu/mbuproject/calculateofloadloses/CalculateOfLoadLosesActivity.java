@@ -62,7 +62,7 @@ public class CalculateOfLoadLosesActivity extends BaseActivity implements Calcul
 
     @Override
     public void setResult(String result) {
-        txtSonuc.setText(String.format("Sonuç :%s",result));
+        txtSonuc.setText(String.format("Sonuç :%s (Sbt)",result));
     }
 
     @Override

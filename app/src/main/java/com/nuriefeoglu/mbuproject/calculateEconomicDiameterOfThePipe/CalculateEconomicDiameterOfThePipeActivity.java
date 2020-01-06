@@ -61,7 +61,7 @@ public class CalculateEconomicDiameterOfThePipeActivity extends BaseActivity imp
 
     @Override
     public void setResult(String result) {
-        txtSonuc.setText(String.format("Sonuç : %s", result));
+        txtSonuc.setText(String.format("Sonuç : %s (m)", result));
     }
 
     @Override
